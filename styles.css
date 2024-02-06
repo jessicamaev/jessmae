@@ -1,0 +1,466 @@
+body {
+    font-family: 'Poppins';
+    background-color: var(--primary-bg-color);
+    color: var(--primary-text-color);
+    margin: 0;
+}
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --primary-bg-color: #EDE7DE;
+    --primary-text-color: #245A4E;
+    --accent-color-1: #E899DC;
+    --accent-color-2: #FE4A49;
+    --accent-color-3: #3E000C;
+}
+
+
+.container {
+    padding: 5%;
+
+}
+
+/* navigation */
+
+header {
+    color: var(--primary-text-color);
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+    position: relative;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--primary-text-color);
+
+}
+
+nav a:hover {
+    color: var(--accent-color-2);
+    background-color: var(--accent-color-1);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+
+/*hero starts here*/
+
+.hero {
+    height: 60vh;
+    width: 100%;
+
+}
+
+.name {
+    padding-top: 10%;
+    font-size: 90px;
+    text-align: center;
+    margin: 0;
+}
+
+.description {
+    text-align: center;
+    font-size: 20px;
+}
+
+
+/* work section index.html */
+
+.work-section {
+    padding-bottom: 50px;
+}
+
+.work-container {
+    display: grid;
+    grid-gap: 50px;
+
+}
+
+.work-card {
+    height: fit-content;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+}
+
+.work-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    transition: .5s;
+    border-radius: 20px;
+}
+
+
+.work-content {
+    position: relative;
+    padding: 40px;
+    color: var(--primary-bg-color);
+    transition: transform .5s;
+    background-color: #3e000cba;
+    border-radius: 20px;
+}
+
+.work-title {
+    font-size: 40px;
+    text-align: center;
+    font-weight: 300;
+}
+
+.work-info {
+    margin: 40px;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+}
+
+
+.btn-work
+{
+    padding-left: 45%;
+}
+
+
+/* about section here (photo) and text on side 
+As seen on: news  */
+
+.about-section {
+    display: flex;
+    flex-direction: row;
+    padding: 5%;
+}
+
+.paragraph {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    padding-left: 60px;
+}
+
+.title {
+    font-size: 40px;
+}
+
+
+/* flip photo here */
+
+.flip-container {
+    -webkit-perspective: 1000;
+    background: transparent;
+    /* margin: 100px auto; */
+    cursor: pointer;
+
+}
+
+/* flip the picture when hover */
+
+.flip-container:hover .flipper,
+.flip-container.hover .flipper {
+    -webkit-transform: rotateY(180deg);
+
+}
+
+.flip-container,
+.front,
+.back,
+.image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+
+/* flip speed */
+
+.flipper {
+    -webkit-transition: 1.5s;
+    -webkit-transform-style: preserve-3d;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+
+}
+
+.flip-container:hover .flipper {
+    /* box-shadow: 0 0 0 0 var(--primary-text-color),
+        inset 0 0 3px rgba(115, 114, 23, 0.8); */
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.925),
+        inset 0 0 3px rgba(115, 114, 23, 0.8);
+}
+
+.flipper {
+    box-shadow:
+        0 0 0 20px rgba(255, 255, 255, 0.519),
+        inset 0 0 3px rgba(115, 114, 23, 0.8);
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+/* hide back  during flip */
+
+.front,
+.back {
+    -webkit-backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* front placed above back */
+
+.front {}
+
+/* back, initially hidden */
+
+.back {
+    -webkit-transform: rotateY(180deg);
+
+}
+
+
+/* rows/columns */
+
+.services {
+    height: fit-content;
+    padding-left: 22%;
+}
+
+
+.column {
+    float: left;
+    width: 50%;
+
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.row-num {
+    font-size: 50px;
+    opacity: 60%;
+    font-family: 'Poppins';
+}
+
+/* art gallery section here */
+
+
+
+
+.rowP {
+    margin: 10px -16px;
+
+}
+
+/* Add padding BETWEEN each column */
+.rowP,
+.rowP>.columnP {
+    padding: 8px;
+
+}
+
+/* Create three equal columns that floats next to each other */
+.columnP {
+    float: left;
+    width: 33.33%;
+    display: none;
+    /* Hide all elements by default */
+}
+
+/* Clear floats after rows */
+.rowP:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Content */
+.contentP {
+    padding: 10px;
+
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+    display: block;
+}
+
+/* Style the buttons */
+.btn {
+    /* height: 40px; */
+    font-size: 18px;
+    border: none;
+    background: var(--primary-text-color);
+    color: var(--primary-bg-color);
+    border-radius: 40px;
+    cursor: pointer;
+    font-family: 'poppins';
+    padding: 10px;
+
+}
+
+.btn:hover {
+    background: var(--accent-color-1);
+    color: var(--accent-color-2);
+}
+
+.btn.active {
+    background: var(--primary-text-color);
+    color: var(--primary-bg-color);
+}
+
+.btn.active:hover {
+    background: var(--accent-color-1);
+    color: var(--accent-color-2);
+}
+
+
+.art-image {
+    width: 50%;
+    height: 50%;
+}
+
+
+
+
+/* footer - add back to top arrow */
+
+footer {
+    background-color: var(--primary-text-color);
+    color: var(--primary-bg-color);
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+    height: 15vh;
+}
+
+
+.row-2 {
+    font-size: 15px;
+}
+
+/* Style all font awesome icons */
+
+
+.fa {
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+
+}
+
+/* social media icons*/
+.fa-linkedin,
+.fa-instagram,
+.fa-github {
+    color: var(--primary-bg-color);
+}
+
+/* social media icons*/
+.fa-linkedin:hover,
+.fa-instagram:hover,
+.fa-github:hover {
+    color: var(--accent-color-1);
+}
+
+.short-text,
+.short-text1 {
+    display: none;
+}
+
+
+
+@media only screen and (max-width: 900px) {
+    body::-webkit-scrollbar {
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        display: none;
+    }
+
+    body {
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+    .name {
+        font-size: 50px;
+    }
+
+    .description {
+        font-size: 20px;
+    }
+
+    .hero {
+        height: 70vh;
+    }
+
+    .work-info {
+        text-align: center;
+        margin: 10px;
+    }
+
+    .short-text,
+    .short-text1 {
+        display: inline-block;
+    }
+
+    .work-btn1,
+    .work-btn2 {
+        display: none;
+    }
+
+    .short-text {
+        height: 30px;
+        font-size: 18px;
+        border: none;
+        background: var(--primary-text-color);
+        color: var(--primary-bg-color);
+        border-radius: 40px;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    .short-text1 {
+        background: none;
+        border: 2px solid var(--primary-bg-color);
+        cursor: pointer;
+        height: 30px;
+        font-size: 18px;
+        border-radius: 40px;
+        text-align: center;
+    }
+
+    footer {
+        font-size: 15px;
+        height: 20vh;
+
+    }
+
+}
