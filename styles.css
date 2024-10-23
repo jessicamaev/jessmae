@@ -32,13 +32,14 @@ body {
 
 header {
     color: var(--primary-text-color);
-    padding: 20px;
+    padding: 10px;
 }
 
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    padding-top: 10px;
     text-align: center;
 }
 
@@ -55,9 +56,9 @@ nav a {
 }
 
 nav a:hover {
-    color: var(--accent-color-2);
+    color: var(--accent-color-3);
     background-color: var(--accent-color-1);
-    padding: 5px;
+    padding: 10px;
     border-radius: 10px;
 }
 
@@ -136,9 +137,15 @@ nav a:hover {
     text-align: center;
 }
 
+.work-info2 {
+    margin: 10px;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+}
 
-.btn-work
-{
+
+.btn-work {
     padding-left: 45%;
 }
 
@@ -321,7 +328,8 @@ As seen on: news  */
     border-radius: 40px;
     cursor: pointer;
     font-family: 'poppins';
-    padding: 10px;
+    padding: 15px;
+
 
 }
 
@@ -418,12 +426,22 @@ footer {
     }
 
     .hero {
-        height: 70vh;
+        height: 50vh;
+    }
+
+    .work-title {
+        font-size: 30px;
     }
 
     .work-info {
         text-align: center;
-        margin: 10px;
+        margin: 5px;
+        font-size: 18px;
+    }
+
+    .btn-work {
+        display: block;
+        margin: auto;
     }
 
     .short-text,
