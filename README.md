@@ -8,4 +8,4 @@
 
 🔍 I'm looking to collaborate on Full Stack Applications.
 
-💬 Ask me anything
+💬 Ask me anything and email jessmaevin@gmail.com
